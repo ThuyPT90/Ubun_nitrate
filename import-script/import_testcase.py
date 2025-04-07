@@ -1,7 +1,7 @@
 import os, sys
 import xml.etree.ElementTree as ET
 # Thêm đường dẫn chứa thư viện nitrate đã clone
-sys.path.insert(0, os.path.abspath("python-nitrate"))
+sys.path.insert(0, os.path.abspath("~/test-nitrate/import-script/python-nitrate/nitrate"))
 
 from nitrate.xmlrpc import NitrateConnection
 
