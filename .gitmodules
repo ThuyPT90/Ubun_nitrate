@@ -1,0 +1,6 @@
+[submodule "backend/Nitrate"]
+	path = backend/Nitrate
+	url = https://github.com/thuypt90/Nitrate.git
+[submodule "import-script/python-nitrate"]
+	path = import-script/python-nitrate
+	url = https://github.com/thuypt90/python-nitrate.git

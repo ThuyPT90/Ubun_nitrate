@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE testopia SYSTEM "testopia.dtd" [
+		<!ENTITY testopia_lt "<">
+		<!ENTITY testopia_gt ">">
+		]>
+<testopia version="1.1">
+	
+	<testcase author="phamthuthuy.ptit@gmail.com" priority="P1" automated="0" status="CONFIRMED">
+		<summary>NFC_Xác thực NFC thành công</summary>
+		<categoryname>1</categoryname>
+		
+		<defaulttester></defaulttester>
+		<notes></notes>
+		<action>&lt;p&gt;1. Đăng k&amp;yacute; User th&amp;agrave;nh c&amp;ocirc;ng&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;2. Chọn x&amp;aacute;c minh ngay&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;3. OCR th&amp;agrave;nh c&amp;ocirc;ng&lt;/p&gt;
+&lt;p&gt;4. NFC th&amp;agrave;nh c&amp;ocirc;ng&lt;/p&gt;</action>
+		<expectedresults>&lt;p&gt;4. Di chuyển sang m&amp;agrave;n h&amp;igrave;nh LiveNess&lt;/p&gt;</expectedresults>
+		<setup>&lt;p&gt;X&amp;aacute;c thực OCR th&amp;agrave;nh c&amp;ocirc;ng&lt;/p&gt;</setup>
+		<breakdown>&lt;p&gt;NFC th&amp;agrave;nh c&amp;ocirc;ng ngay sau khi đăng k&amp;yacute;&lt;/p&gt;</breakdown>
+		
+		<testplan_reference type="Xml_description">
+			
+			<item>NFC</item>
+			
+		</testplan_reference>
+	</testcase>
+	
+</testopia>
