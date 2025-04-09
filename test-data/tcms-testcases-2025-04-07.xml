@@ -1,29 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE testopia SYSTEM "testopia.dtd" [
-		<!ENTITY testopia_lt "<">
-		<!ENTITY testopia_gt ">">
-		]>
+<!ENTITY nbsp "&#160;">
+]>
 <testopia version="1.1">
-	
-	<testcase author="phamthuthuy.ptit@gmail.com" priority="P1" automated="0" status="CONFIRMED">
-		<summary>NFC_Xác thực NFC thành công</summary>
-		<categoryname>1</categoryname>
-		
-		<defaulttester></defaulttester>
-		<notes></notes>
-		<action>&lt;p&gt;1. Đăng k&amp;yacute; User th&amp;agrave;nh c&amp;ocirc;ng&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;2. Chọn x&amp;aacute;c minh ngay&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;3. OCR th&amp;agrave;nh c&amp;ocirc;ng&lt;/p&gt;
-&lt;p&gt;4. NFC th&amp;agrave;nh c&amp;ocirc;ng&lt;/p&gt;</action>
-		<expectedresults>&lt;p&gt;4. Di chuyển sang m&amp;agrave;n h&amp;igrave;nh LiveNess&lt;/p&gt;</expectedresults>
-		<setup>&lt;p&gt;X&amp;aacute;c thực OCR th&amp;agrave;nh c&amp;ocirc;ng&lt;/p&gt;</setup>
-		<breakdown>&lt;p&gt;NFC th&amp;agrave;nh c&amp;ocirc;ng ngay sau khi đăng k&amp;yacute;&lt;/p&gt;</breakdown>
-		
-		<testplan_reference type="Xml_description">
-			
-			<item>NFC</item>
-			
-		</testplan_reference>
-	</testcase>
-	
+  <testcase author="thuypt3@i-com.vn" status="PROPOSED" priority="P1" automated="1">
+    <categoryname>MP_API</categoryname>
+    <component product="MyPoint">MP_Game_BUNDLE</component>
+    <defaulttester>thuypt3@i-com.vn</defaulttester>
+    <summary>Kiểm tra cơ chế bảo vệ hoặc thu hồi khi Voucher ID bị leak</summary>
+    <setup><![CDATA[
+Ảnh đã được gán Voucher ID trong CMS.<br/>
+Có khả năng người dùng biết được mã Voucher ID (bị leak).
+]]></setup>
+    <action><![CDATA[
+1. Lấy Voucher ID từ API hoặc database.<br/>
+2. Thử sử dụng Voucher ID đó trên tài khoản không có quyền.<br/>
+3. Kiểm tra hệ thống phản hồi.<br/>
+4. Admin thực hiện thu hồi hoặc thay thế Voucher ID.<br/>
+5. Thử sử dụng lại Voucher ID đã thu hồi.<br/>
+6. Kiểm tra log hệ thống.
+]]></action>
+    <expectedresults><![CDATA[
+- Hệ thống từ chối sử dụng Voucher ID bị leak nếu không hợp lệ.<br/>
+- Voucher ID sau khi thu hồi không thể sử dụng lại.<br/>
+- Log ghi nhận các hành vi bất thường liên quan đến Voucher ID bị leak.
+]]></expectedresults>
+    <breakdown>Security_Voucher_Leak</breakdown>
+    <testplan_reference>MyPoint_GAME</testplan_reference>
+  </testcase>
 </testopia>
