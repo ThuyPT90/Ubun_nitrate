@@ -1,4 +1,4 @@
-#!/home/thuypt90/projects/Ubun_nitrate/import-script/bug-report/venv/bin/python3
+#!/home/thuypt90/Ubun_nitrate/import-script/bug-report/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
