@@ -7,5 +7,5 @@ JIRA_PROJECT_KEY = "PAYT"
 JIRA_ISSUE_TYPE = "Bug"
 
 NITRATE_URL = "http://127.0.0.1:8000/xmlrpc/"
-NITRATE_USER = "admin"
-NITRATE_PASS = "admin"
+NITRATE_USER = "thuypt"
+NITRATE_PASS = "123456"
